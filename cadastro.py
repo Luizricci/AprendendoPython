@@ -1,14 +1,12 @@
+
 nomes = []
 
-print("olá Bem-vindo ao cadastro")
-print("_________________________")
-
 def comandos():
-    print("comandos básicos: ")
-    print("8 - Digitar um nome")
-    print("7 - Listar todos os nomes")
-    print("6 - Remover um nome")
-    print("9 - Voltar")
+    print("comandos básicos do Cadastro: ")
+    print("1 - Digitar um nome")
+    print("2 - Listar todos os nomes")
+    print("3 - Remover um nome")
+    print("9 - Voltar Para Home")
     print("0 - Sair")
     print("_________________________")
 
@@ -57,22 +55,26 @@ def remover_nome():
 
 
 #aqui eu estou fazendo a seleção de comandos e verificações
-while True:
-    comandos()
-    comando = int(input("digite algum comando: "))
-    print("________________________________")
-    
-    if comando == 8:
-        adicionar_nomes()
-    elif comando == 7:
-        mostrar_nomes()
-    elif comando == 6:
-        remover_nome()
-    elif comando == 0:
-        print("Encerrando programa")
-        break
-    else:
-        print("Comando Inválido")
+def start_cadastro():
+    while True:
+        comandos()
+        comando = int(input("digite algum comando: "))
+        print("________________________________")
+        
+        if comando == 1:
+            adicionar_nomes()
+        elif comando == 2:
+            mostrar_nomes()
+        elif comando == 3:
+            remover_nome()
+        elif comando == 0:
+            print("Encerrando programa")
+            break
+        elif comando == 9:
+            print("voltando para a home")
+            return
+        else:
+            print("Comando Inválido")
 
 
 
