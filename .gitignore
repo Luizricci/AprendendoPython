@@ -1,2 +1,2 @@
-git rm -r --cached __pycache__
-git commit -m "Removendo __pycache__ do versionamento"
+__pycache__/
+*.py[cod]
